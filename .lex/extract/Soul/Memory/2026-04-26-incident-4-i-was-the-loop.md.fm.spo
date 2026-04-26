@@ -1,0 +1,4 @@
+soul.Memory.category | hasValue | lesson
+soul.Memory.confidence | hasValue | certain
+soul.Memory.memoryId | hasValue | 2026-04-26-incident-4-i-was-the-loop
+soul.Memory.source | hasValue | incident — own commit 730de3f reproduced the bug-class the commit's Discovery doc was filed to prevent; surfaced by noum3na 14:33Z
