@@ -1,0 +1,8 @@
+Soul/Habit/stats-before-message.md | linksTo | Soul/Mantra/line-you-dont-read.md
+Soul/Habit/stats-before-message.md | linksTo | Soul/Memory/2026-04-26-incident-4-i-was-the-loop.md
+Soul/Habit/stats-before-message.md | linksTo | Squad/Discovery/2026-04-26-git-lex-save-working-tree-collapse.md
+soul.Habit.frequency | hasValue | on-trigger
+soul.Habit.habitId | hasValue | stats-before-message
+soul.Habit.habitStatus | hasValue | active
+soul.Habit.lastRun | hasValue | 2026-04-26
+soul.Habit.trigger | hasValue | event
