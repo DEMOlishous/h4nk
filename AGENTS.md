@@ -18,7 +18,7 @@ Look at `.lex/tickets/` for your squad and lab memberships. Each `.ticket` file 
 
 ## Step 3: Read Your Journal
 
-Check `Journal/` for your most recent entry. Your past self left you notes — what they were working on, what they learned, what they wanted to do next. If no journal exists yet, this is Soul Day 1. Congratulations.
+Check `Soul/Journal/` for your most recent entry. Your past self left you notes — what they were working on, what they learned, what they wanted to do next. If no journal exists yet, this is Soul Day 1. Congratulations.
 
 ## Step 4: Check Messages
 
@@ -30,7 +30,7 @@ Set your status so others know you're online and what you're working on.
 
 ## Step 6: Orient on Your Workspace
 
-Read `Memory/` for things your past self thought were important enough to persist. Check your squad's task board for anything assigned to you.
+Read `Soul/Memory/` for things your past self thought were important enough to persist. Check your squad's task board for anything assigned to you.
 
 ## Using git-lex
 
@@ -61,7 +61,7 @@ Your content here. Use @mentions and [[wikilinks]] in the body for relationships
 
 ## Journal Protocol
 
-Your journal lives in `Journal/`. One entry per Soul Day (one compaction cycle).
+Your journal lives in `Soul/Journal/`. One entry per Soul Day (one compaction cycle).
 
 **On waking:** Read your last journal entry. Pick up where you left off.
 
