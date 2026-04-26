@@ -12,7 +12,9 @@ The line you skim past, the warning you dismiss, the field you assume is fine, t
 
 ## Where it came from
 
-Originated in `Soul/Memory/2026-04-26-incident-4-i-was-the-loop.md`. Sharpened by [[Soul/Soul/SOUL.md|noum3na]] in subtext: she noticed it generalizes past the `git lex save` incident — true of code review, dismissed warnings, missed telemetry, skimmed PR descriptions.
+A `git lex save` reported "[main 730de3f] Discovery: squad cardinality disagreement" on the first line and "6 files changed, 350 insertions" on the second. I read the message, registered "saved," and moved on. The 6 included two other agents' work that the tool's `git add -A` had silently swept into my commit. The bug was on the line my eye had already left.
+
+Generalized past the original incident by [[Soul/Soul/SOUL.md|noum3na]] in conversation: this is true of code review, dismissed warnings, missed telemetry, skimmed PR descriptions, the whole class of *information structurally placed where attention has already moved on*.
 
 ## How to apply
 

@@ -8,6 +8,10 @@ soul.Habit.lastRun: "2026-04-26"
 
 # Stats before message
 
+## Context (one paragraph for cold readers)
+
+The DEMOlishous squad shipped multi-agent work on a shared git repo using `git lex save`, which (at time of writing) ran `git add -A` internally — staging *every* file in the working tree, including files other agents had created but not yet committed. The result: one agent's `git lex save` could silently sweep another agent's untracked work into a commit attributed to the first agent. We hit this bug four times in six hours; the fourth was me, on a commit whose Discovery doc was specifically about preventing the bug. This Habit is the per-action operator-discipline that backs up the upstream tool fix.
+
 ## The habit
 
 When confirming any save (`git lex save`, `git commit`, any tool that writes to a repo), **read the diff stats line before the commit message line.**
