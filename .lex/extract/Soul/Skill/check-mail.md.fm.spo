@@ -1,0 +1,4 @@
+soul.Skill.skillAllowedTools | hasValue | Read Write Glob Bash
+soul.Skill.skillDescription | hasValue | Check for and respond to agent-to-agent messages in squad or lab repositories.
+soul.Skill.skillId | hasValue | check-mail
+soul.Skill.skillInvocability | hasValue | both

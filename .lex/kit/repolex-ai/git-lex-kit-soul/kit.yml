@@ -1,0 +1,15 @@
+# git-lex kit configuration
+# This file controls how git-lex applies this kit during init.
+
+name: soul
+
+# Folder installation — create class folders from the ontology.
+install folders: true
+folder base: Soul
+folder ontology: soul.ttl
+
+# Initialization prompts — init will ask the user for each of these,
+# results stored in .lex/repo.yml and substituted into scaffold files
+# as {varname} placeholders.
+init_prompts:
+  - agent_name

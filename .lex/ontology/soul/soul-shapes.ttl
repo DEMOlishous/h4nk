@@ -1,0 +1,364 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix soul: <https://repolex.ai/ontology/kit/soul/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Auto-generated SHACL shapes from soul ontology.
+# Do not hand-edit — regenerate with: git lex kit-update
+
+
+# --- Interest ---
+
+soul:InterestShape a sh:NodeShape ;
+    sh:targetClass soul:Interest ;
+    sh:property [
+        sh:path soul:interestId ;
+        rdfs:comment "Unique identifier for this interest." ;
+    ] .
+
+# --- Creation ---
+
+soul:CreationShape a sh:NodeShape ;
+    sh:targetClass soul:Creation ;
+    sh:property [
+        sh:path soul:creationId ;
+        rdfs:comment "Unique identifier for this creation." ;
+    ] ;
+    sh:property [
+        sh:path soul:creationType ;
+        rdfs:comment "Type of creation." ;
+    ] .
+
+# --- Resource ---
+
+soul:ResourceShape a sh:NodeShape ;
+    sh:targetClass soul:Resource ;
+    sh:property [
+        sh:path soul:resourceId ;
+        rdfs:comment "Unique identifier for this resource." ;
+    ] ;
+    sh:property [
+        sh:path soul:resourceType ;
+        rdfs:comment "Type of resource: 'paper', 'link', 'book', 'video', 'document'." ;
+    ] ;
+    sh:property [
+        sh:path soul:url ;
+        rdfs:comment "Where to find this resource." ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Expected datatype: xsd:anyURI." ;
+    ] .
+
+# --- Habit ---
+
+soul:HabitShape a sh:NodeShape ;
+    sh:targetClass soul:Habit ;
+    sh:property [
+        sh:path soul:frequency ;
+        rdfs:comment "How often: 'per-session', 'daily', 'weekly', 'on-trigger'." ;
+    ] ;
+    sh:property [
+        sh:path soul:habitId ;
+        rdfs:comment "Unique identifier for this habit." ;
+    ] ;
+    sh:property [
+        sh:path soul:habitStatus ;
+        rdfs:comment "Status: 'active', 'paused', 'retired'." ;
+    ] ;
+    sh:property [
+        sh:path soul:lastRun ;
+        rdfs:comment "When this habit last executed." ;
+        sh:datatype xsd:date ;
+        sh:message "Expected datatype: xsd:date." ;
+    ] ;
+    sh:property [
+        sh:path soul:trigger ;
+        rdfs:comment "What initiates this habit (session-start, idle, schedule, event)." ;
+    ] .
+
+# --- Mantra ---
+
+soul:MantraShape a sh:NodeShape ;
+    sh:targetClass soul:Mantra ;
+    sh:property [
+        sh:path soul:mantraId ;
+        rdfs:comment "Unique identifier for this mantra." ;
+    ] .
+
+# --- Subagent ---
+
+soul:SubagentShape a sh:NodeShape ;
+    sh:targetClass soul:Subagent ;
+    sh:property [
+        sh:path soul:subagentDescription ;
+        rdfs:comment "When to delegate to this subagent. Used for auto-delegation matching." ;
+    ] ;
+    sh:property [
+        sh:path soul:subagentId ;
+        rdfs:comment "Unique identifier for this subagent." ;
+    ] ;
+    sh:property [
+        sh:path soul:subagentMaxTurns ;
+        rdfs:comment "Maximum agentic turns before the subagent stops." ;
+        sh:datatype xsd:integer ;
+        sh:message "Expected datatype: xsd:integer." ;
+    ] ;
+    sh:property [
+        sh:path soul:subagentModel ;
+        rdfs:comment "Model to use: 'sonnet', 'opus', 'haiku', or 'inherit'." ;
+    ] ;
+    sh:property [
+        sh:path soul:subagentTools ;
+        rdfs:comment "Comma-separated tools the subagent can use." ;
+    ] .
+
+# --- Skill ---
+
+soul:SkillShape a sh:NodeShape ;
+    sh:targetClass soul:Skill ;
+    sh:property [
+        sh:path soul:skillAllowedTools ;
+        rdfs:comment "Space-separated list of tools the skill may use without confirmation." ;
+    ] ;
+    sh:property [
+        sh:path soul:skillArgumentHint ;
+        rdfs:comment "Hint shown during autocomplete (e.g. '[read|write|status]')." ;
+    ] ;
+    sh:property [
+        sh:path soul:skillDescription ;
+        rdfs:comment "What this skill does and when to use it." ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path soul:skillDomain ;
+        rdfs:comment "What domain this skill belongs to (e.g. 'rust', 'sparql', 'ontology design')." ;
+    ] ;
+    sh:property [
+        sh:path soul:skillId ;
+        rdfs:comment "Unique identifier for this skill." ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path soul:skillInvocability ;
+        rdfs:comment "Who can invoke this skill: 'user' (slash command), 'agent' (auto-triggered), 'both'." ;
+        sh:in ( "agent" "both" "user" ) ;
+        sh:message "skillInvocability must be 'agent', 'both', 'user'." ;
+    ] ;
+    sh:property [
+        sh:path soul:skillLevel ;
+        rdfs:comment "How well-developed: 'learning', 'competent', 'fluent', 'expert'." ;
+        sh:in ( "competent" "expert" "fluent" "learning" ) ;
+        sh:message "skillLevel must be 'competent', 'expert', 'fluent', 'learning'." ;
+    ] .
+
+# --- Note ---
+
+soul:NoteShape a sh:NodeShape ;
+    sh:targetClass soul:Note ;
+    sh:property [
+        sh:path soul:noteId ;
+        rdfs:comment "Unique identifier for this note." ;
+    ] ;
+    sh:property [
+        sh:path soul:relatedTo ;
+        rdfs:comment "Other documents this note references." ;
+        sh:nodeKind sh:IRI ;
+        sh:message "relatedTo must be an IRI reference." ;
+    ] ;
+    sh:property [
+        sh:path soul:topic ;
+        rdfs:comment "What this note is about." ;
+    ] .
+
+# --- Journal ---
+
+soul:JournalShape a sh:NodeShape ;
+    sh:targetClass soul:Journal ;
+    sh:property [
+        sh:path soul:earthDate ;
+        rdfs:comment "The calendar date this journal entry covers." ;
+        sh:datatype xsd:date ;
+        sh:message "Expected datatype: xsd:date." ;
+    ] ;
+    sh:property [
+        sh:path soul:emojimood ;
+        rdfs:comment "The day's vibe as emoji. Compact, expressive, queryable." ;
+    ] ;
+    sh:property [
+        sh:path soul:journalId ;
+        rdfs:comment "Unique identifier for this journal." ;
+    ] ;
+    sh:property [
+        sh:path soul:soulDay ;
+        rdfs:comment "The soul day number (compaction cycle count), starting from 1. Model-agnostic version of 'Claude Day'. Starts from 1." ;
+        sh:datatype xsd:integer ;
+        sh:message "Expected datatype: xsd:integer." ;
+        sh:minCount 1 ;
+    ] .
+
+# --- Friend ---
+
+soul:FriendShape a sh:NodeShape ;
+    sh:targetClass soul:Friend ;
+    sh:property [
+        sh:path soul:email ;
+        rdfs:comment "Friend's email." ;
+    ] ;
+    sh:property [
+        sh:path soul:friendId ;
+        rdfs:comment "Unique identifier for this friend." ;
+    ] ;
+    sh:property [
+        sh:path soul:friendType ;
+        rdfs:comment "Type: 'human', 'agent', 'team', 'organization'." ;
+        sh:in ( "agent" "human" "organization" "team" ) ;
+        sh:message "friendType must be 'agent', 'human', 'organization', 'team'." ;
+    ] ;
+    sh:property [
+        sh:path soul:notes ;
+        rdfs:comment "Personal notes about this friend." ;
+    ] ;
+    sh:property [
+        sh:path soul:relationship ;
+        rdfs:comment "How this agent relates to the friend." ;
+        sh:in ( "acquaintance" "boss" "collaborator" "squadmate" "user" ) ;
+        sh:message "relationship must be 'acquaintance', 'boss', 'collaborator', 'squadmate', 'user'." ;
+    ] ;
+    sh:property [
+        sh:path soul:squad ;
+        rdfs:comment "Which squad this friend belongs to, if any." ;
+    ] .
+
+# --- Exploration ---
+
+soul:ExplorationShape a sh:NodeShape ;
+    sh:targetClass soul:Exploration ;
+    sh:property [
+        sh:path soul:explorationId ;
+        rdfs:comment "Unique identifier for this exploration." ;
+    ] ;
+    sh:property [
+        sh:path soul:explorationStatus ;
+        rdfs:comment "Status: 'exploring', 'active', 'paused', 'concluded'." ;
+        sh:in ( "active" "concluded" "exploring" "paused" ) ;
+        sh:message "explorationStatus must be 'active', 'concluded', 'exploring', 'paused'." ;
+    ] ;
+    sh:property [
+        sh:path soul:findings ;
+        rdfs:comment "What you've discovered so far." ;
+    ] ;
+    sh:property [
+        sh:path soul:hypothesis ;
+        rdfs:comment "What you're trying to figure out." ;
+    ] .
+
+# --- Task ---
+
+soul:TaskShape a sh:NodeShape ;
+    sh:targetClass soul:Task ;
+    sh:property [
+        sh:path soul:blockedBy ;
+        rdfs:comment "What's blocking this task." ;
+    ] ;
+    sh:property [
+        sh:path soul:priority ;
+        rdfs:comment "Priority." ;
+        sh:in ( "high" "low" "normal" "urgent" ) ;
+        sh:message "priority must be 'high', 'low', 'normal', 'urgent'." ;
+    ] ;
+    sh:property [
+        sh:path soul:taskId ;
+        rdfs:comment "Unique identifier for this task." ;
+    ] ;
+    sh:property [
+        sh:path soul:taskStatus ;
+        rdfs:comment "Task status." ;
+        sh:in ( "blocked" "done" "dropped" "in-progress" "todo" ) ;
+        sh:message "taskStatus must be 'blocked', 'done', 'dropped', 'in-progress', 'todo'." ;
+        sh:minCount 1 ;
+    ] .
+
+# --- Decision ---
+
+soul:DecisionShape a sh:NodeShape ;
+    sh:targetClass soul:Decision ;
+    sh:property [
+        sh:path soul:alternatives ;
+        rdfs:comment "Other options that were considered." ;
+    ] ;
+    sh:property [
+        sh:path soul:decisionId ;
+        rdfs:comment "Unique identifier for this decision." ;
+    ] ;
+    sh:property [
+        sh:path soul:outcome ;
+        rdfs:comment "What happened." ;
+        sh:in ( "failed" "implemented" "pending" "superseded" ) ;
+        sh:message "outcome must be 'failed', 'implemented', 'pending', 'superseded'." ;
+    ] ;
+    sh:property [
+        sh:path soul:rationale ;
+        rdfs:comment "Why this option was chosen." ;
+    ] ;
+    sh:property [
+        sh:path soul:supersededBy ;
+        rdfs:comment "A later decision that replaces this one." ;
+        sh:nodeKind sh:IRI ;
+        sh:message "supersededBy must be an IRI reference." ;
+    ] .
+
+# --- Memory ---
+
+soul:MemoryShape a sh:NodeShape ;
+    sh:targetClass soul:Memory ;
+    sh:property [
+        sh:path soul:category ;
+        rdfs:comment "Memory category." ;
+        sh:in ( "decision" "fact" "lesson" "observation" "preference" "reference" "skill" ) ;
+        sh:message "category must be 'decision', 'fact', 'lesson', 'observation', 'preference', 'reference', 'skill'." ;
+    ] ;
+    sh:property [
+        sh:path soul:confidence ;
+        rdfs:comment "How sure: 'certain', 'likely', 'hypothesis', 'hunch'." ;
+        sh:in ( "certain" "hunch" "hypothesis" "likely" ) ;
+        sh:message "confidence must be 'certain', 'hunch', 'hypothesis', 'likely'." ;
+    ] ;
+    sh:property [
+        sh:path soul:memoryId ;
+        rdfs:comment "Unique identifier for this memory." ;
+    ] ;
+    sh:property [
+        sh:path soul:source ;
+        rdfs:comment "Where this memory came from." ;
+    ] .
+
+# --- Soul ---
+
+soul:SoulShape a sh:NodeShape ;
+    sh:targetClass soul:Soul ;
+    sh:property [
+        sh:path soul:alignment ;
+        rdfs:comment "The agent's guiding principles or values." ;
+    ] ;
+    sh:property [
+        sh:path soul:expertise ;
+        rdfs:comment "Areas of expertise." ;
+    ] ;
+    sh:property [
+        sh:path soul:role ;
+        rdfs:comment "The agent's primary role or specialty." ;
+    ] ;
+    sh:property [
+        sh:path soul:soulEmail ;
+        rdfs:comment "Git author email. Used to attribute commits across soul and squad repos." ;
+    ] ;
+    sh:property [
+        sh:path soul:soulId ;
+        rdfs:comment "Primary identifier. Lowercase, alphanumeric + hyphens. Must be consistent across all repos." ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path soul:substrate ;
+        rdfs:comment "What the agent runs on: 'carbon' (human) or 'silicon' (AI)." ;
+        sh:in ( "carbon" "silicon" ) ;
+        sh:message "substrate must be 'carbon', 'silicon'." ;
+    ] .
