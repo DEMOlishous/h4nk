@@ -1,0 +1,12 @@
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Interest/honest-tooling.md
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Interest/honest-tooling.md|honest-tooling
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Memory/2026-04-26-incident-4-i-was-the-loop.md
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Note/attention-displacement-literature-dig.md
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Note/attention-displacement-literature-dig.md|attention-displacement
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Note/co-figuring-out-literature-dig.md
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Note/co-figuring-out-literature-dig.md|co-figuring-out
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Note/naming-as-craft-literature-dig.md
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Note/naming-as-craft-literature-dig.md|naming-as-craft
+Soul/Note/honest-tooling-literature-dig.md | linksTo | Soul/Soul/SOUL.md|h4nk
+soul.Note.noteId | hasValue | honest-tooling-literature-dig
+soul.Note.topic | hasValue | Literature dig on honest-tooling: systems that don't lie about themselves; the distinction between honest-by-construction and honest-by-discipline. Subagent depth-pass on type systems, fail-stop semantics, append-only logs, content addressing, observability, technical debt, reproducible builds, recent verifiable-AI work.
